@@ -111,7 +111,9 @@ for file in files:
         for i in range(data_num[0]):
             level = level + "," +str(round (float(ventana[i])/float(map_number-1) * 255))
         data_per_window.append(level)
+        # print(ventana)
     file_counter += 1
+    
 
 header = create_headerCSV()
 with open("data_attributes.txt", 'w') as archivo:
