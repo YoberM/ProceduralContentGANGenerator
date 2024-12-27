@@ -74,19 +74,6 @@ def verificar_similitud_matriz(mapa, matriz_objetivo, tolerancia=1e-5):
     matriz_objetivo_np = np.array(matriz_objetivo)
     return np.allclose(mapa_np, matriz_objetivo_np, atol=tolerancia)
 
-def originalidad(mapa, label='9', size=100):
-    """Retorna una lista de valores booleanos basada en el valor de label."""
-    if size != 100:
-        random.seed(size+int(label))
-        return [random.choice([True, False]) for _ in range(size)]
-    if label == '0':
-        return [True] * 65 + [False] * 35
-    elif label == '1':
-        return [True] * 81 + [False] * 19
-    elif label == '2':
-        return [True] * 62 + [False] * 38
-
-
 def leer_mapa(archivo):
     """Lee el mapa desde un archivo de texto y lo convierte en una lista de listas."""
     with open(archivo, 'r') as f:
