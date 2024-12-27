@@ -69,7 +69,6 @@ def create_attributes_counted(window,imageTag):
 files = []
 path = "data/"
 labels = []
-# Lectura de los niveles
 for carpeta in os.listdir(path):
     if os.path.isdir(path+carpeta):
         for textImage in os.listdir(path+carpeta+"/"):
@@ -80,8 +79,7 @@ for carpeta in os.listdir(path):
 print (files)
 print (labels)
 print ("\n\n")
-# Supongamos que tienes un texto de 14x202 (como una cadena de caracteres, por ejemplo).
-# texto = "XS-?QE<>[]oBb"  # Reemplaza esto con tu propio texto
+
 path = "generatedimg/"
 file_counter = 0
 globalcounter = 0
@@ -89,11 +87,9 @@ num_of_windows = 0
 data_per_window = []
 for file in files:
     texto = 0
-    # Leer el texto desde un archivo
     with open(file, 'r') as file:
         texto = (file.read().split('\n'))
     
-    ## Procesing from TVLGC to 0 .. 12 format
     texto_matriz = []
     for row in texto:
         newrow = []
@@ -101,9 +97,8 @@ for file in files:
             newrow.append(mapeo_caracteres[char])
         texto_matriz.append(np.array(newrow))
     texto_matriz = np.array(texto_matriz)
-    # Especifica el tamaño de la ventana deseada (14x14)
 
-    # Crea las ventanas
+
     ventanas = create_windowsCSV(texto_matriz, windows_size)
     for ventana in ventanas:
         level = labels[file_counter] 
@@ -114,10 +109,7 @@ for file in files:
     file_counter += 1
 
 header = create_headerCSV()
-with open("data_attributes.txt", 'w') as archivo:
+with open("mario_train.csv", 'w') as archivo:
     archivo.write(f"{header}\n")
     for i in data_per_window:
         archivo.write(f"{i}\n")
-
-
-    # Ahora tendrás archivos de imagen (ventana_0.png, ventana_1.png, etc.) que representan las ventanas 14x14 de tu texto.

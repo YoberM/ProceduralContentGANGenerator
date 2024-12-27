@@ -125,6 +125,10 @@ stack-data==0.6.3
 sympy==1.13.1
 terminado==0.18.1
 tinycss2==1.4.0
+torch==2.5.1+cu118
+torch-vision==0.1.6.dev0
+torchaudio==2.5.1+cu118
+torchvision==0.20.1+cu118
 tornado==6.4.1
 traitlets==5.14.3
 triton==3.1.0
@@ -139,3 +143,31 @@ webencodings==0.5.1
 websocket-client==1.8.0
 widgetsnbextension==4.0.13
 yarg==0.1.9
+
+
+# punto 1
+# entorno de ejecucion
+# lenguaje dato
+# herramienta
+# framework
+
+# punto 2 
+# dataet propueta
+
+# punto 3
+# prueba 
+# hiperparametro
+
+
+# punto 4 prueeba
+# bien,
+# demotrar cuando comete error
+
+# punto 5
+# recultado etaditico metrica
+# metrica mia
+
+# punto 6
+# dicucion del modelo
+
+# conclucione recponder a mic objetivoc 
