@@ -12,3 +12,5 @@ pip install -r requirements.txt
 Install torch (this is absolutely needed, there are some errors using pip)
 https://pytorch.org/get-started/locally/
 (Probably will you will use this command pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124)
+
+Once you installed all dependencies you can test the procedural content gan generator on SAGAN Notebook (SAGAN.ipynb)
