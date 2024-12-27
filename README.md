@@ -16,13 +16,7 @@ https://pytorch.org/get-started/locally/
 Once you installed all dependencies you can test the procedural content gan generator on SAGAN Notebook (SAGAN.ipynb)
 
 
-This work has basis on 
-@misc{zhang2019selfattentiongenerativeadversarialnetworks,
-      title={Self-Attention Generative Adversarial Networks}, 
-      author={Han Zhang and Ian Goodfellow and Dimitris Metaxas and Augustus Odena},
-      year={2019},
-      eprint={1805.08318},
-      archivePrefix={arXiv},
-      primaryClass={stat.ML},
-      url={https://arxiv.org/abs/1805.08318}, 
-}
+This project is based on:
+Self-Attention Generative Adversarial Networks
+Han Zhang, Ian Goodfellow, Dimitris Metaxas, Augustus Odena. 2019.
+Available at: arXiv:1805.08318.
